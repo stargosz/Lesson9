@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import org.openqa.selenium.Keys;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -29,7 +28,7 @@ public class SliderTest extends TestBase {
     @Order(2)
     @DisplayName("Moves slider to given value")
     public void shouldMoveSliderTo50(){
-        sliderPage.moveToZeroValue();
+        sliderPage.moveTo(0);
         sliderPage.moveTo(50);
         sliderPage.moveTo(30);
         sliderPage.moveTo(30);

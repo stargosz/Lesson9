@@ -48,11 +48,4 @@ public class SliderPage {
             assertThat(getActualValue(), is(expectedValue));
         }
     }
-
-    public void moveToZeroValue() {
-        for (int i = getActualValue(); i > 0; i--) {
-            setSlider(Keys.ARROW_LEFT);
-        }
-        assertThat(getActualValue(), is(0));
-    }
 }
